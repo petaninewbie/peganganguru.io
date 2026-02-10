@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEGANGAN GURU: Technopreneurship TKJ</title>
+    <title>PEGANGAN GURU: Technopreneurship TKJ (Protected)</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #eaeaea; margin: 0; padding: 20px; }
+        /* CSS ASLI */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #eaeaea; margin: 0; padding: 20px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
         .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; border-top: 10px solid #dc3545; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h1 { color: #dc3545; margin-bottom: 5px; }
         .subtitle { color: #666; font-style: italic; margin-bottom: 30px; display: block; border-bottom: 1px solid #ddd; padding-bottom: 10px;}
@@ -16,106 +17,219 @@
         th { background-color: #343a40; color: white; }
         .rubric-score { text-align: center; font-weight: bold; }
         ul { margin-top: 5px; }
+
+        /* CSS TAMBAHAN UNTUK LOGIN */
+        #login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            width: 300px;
+        }
+        .login-box h3 { margin-top: 0; color: #dc3545; }
+        .login-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-box button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+        }
+        .login-box button:hover { background: #c82333; }
+        #main-content { display: none; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>PEGANGAN GURU & KUNCI JAWABAN</h1>
-    <span class="subtitle">Modul Ajar: Kewirausahaan Teknologi (Technopreneur) - Kelas XII TKJ</span>
-
-    <section>
-        <h2>I. Informasi Umum</h2>
-        <ul>
-            <li><strong>Unit Pembelajaran:</strong> Laporan Keuangan Usaha Jasa IT</li>
-            <li><strong>Model Pembelajaran:</strong> Project-Based Learning (PjBL)</li>
-            <li><strong>Alokasi Waktu:</strong> 2 JP (2 x 45 Menit)</li>
-            <li><strong>Tujuan:</strong> Siswa mampu menyusun laporan keuangan sederhana dan menganalisis arus kas (Cash Flow).</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>II. Kunci Jawaban (Studi Kasus ABC NetSolution)</h2>
-        <div class="answer-key">
-            <h3>Hasil Perhitungan Dashboard (Data Valid):</h3>
-            <ul>
-                <li><strong>Total Pemasukan (Debit):</strong> Rp 3.900.000</li>
-                <li><strong>Total Pengeluaran (Kredit):</strong> Rp 1.380.000</li>
-                <li><strong>Saldo Akhir Kas:</strong> Rp 2.520.000</li>
-                <li><strong>Laba Bersih (Profit):</strong> Rp 1.020.000<br>
-                <em>(Rumus: Saldo Akhir - Modal Awal = 2.520.000 - 1.500.000)</em></li>
-            </ul>
+    <div id="login-screen">
+        <div class="login-box">
+            <h3>Akses Terbatas</h3>
+            <p>Masukkan Password Guru:</p>
+            <input type="password" id="passInput" placeholder="Password...">
+            <button onclick="cekPassword()">BUKA DOKUMEN</button>
+            <p id="error-msg" style="color:red; font-size: 12px; display:none; margin-top:10px;">Password Salah!</p>
         </div>
+    </div>
 
-        <h3>Jawaban Analisis Kritis (Soal No. 4 & 5):</h3>
-        <p><strong>Soal 4: Posisi Saldo Tanggal 15 Feb</strong></p>
-        <p>Jawaban Benar: <strong>Rp 590.000</strong>.</p>
-        <p><em>Penjelasan:</em> Ini adalah titik kritis. Setelah membeli kabel box seharga 850rb, saldo menipis. Jika siswa menjawab "Aman tapi Kritis", beri nilai plus. Ini mengajarkan pentingnya menagih DP (Down Payment) sebelum kerja agar kas tidak kosong.</p>
+    <div id="main-content" class="container">
+        <h1>PEGANGAN GURU & KUNCI JAWABAN</h1>
+        <span class="subtitle">Modul Ajar: Kewirausahaan Teknologi (Technopreneur) - Kelas XII TKJ</span>
 
-        <p><strong>Soal 5: Saran Penghematan</strong></p>
-        <p>Jawaban yang diharapkan:</p>
-        <ul>
-            <li>Membeli kabel LAN 1 box sekaligus (Grosir) dibanding eceran.</li>
-            <li>Efisiensi biaya makan (membawa bekal).</li>
-            <li>Menggunakan paket internet bulanan kantor, bukan harian.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>I. Informasi Umum</h2>
+            <ul>
+                <li><strong>Unit Pembelajaran:</strong> Laporan Keuangan Usaha Jasa IT</li>
+                <li><strong>Model Pembelajaran:</strong> Project-Based Learning (PjBL)</li>
+                <li><strong>Alokasi Waktu:</strong> 2 JP (2 x 45 Menit)</li>
+                <li><strong>Tujuan:</strong> Siswa mampu menyusun laporan keuangan sederhana dan menganalisis arus kas (Cash Flow).</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>III. Rubrik Penilaian (Assessment)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 25%;">Aspek Penilaian</th>
-                    <th style="width: 10%;" class="rubric-score">Bobot</th>
-                    <th>Kriteria Penilaian</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Teknis Excel (Input & Format)</strong></td>
-                    <td class="rubric-score">30%</td>
-                    <td>
-                        <strong>4 (Sangat Baik):</strong> Semua 12 data terinput benar, format Rp rapi.<br>
-                        <strong>2 (Cukup):</strong> Ada 2-3 kesalahan input, format acak-acakan.
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>Otomatisasi (Rumus)</strong></td>
-                    <td class="rubric-score">20%</td>
-                    <td>
-                        <strong>4 (Sangat Baik):</strong> Rumus Saldo & SUM berfungsi tanpa error.<br>
-                        <strong>1 (Kurang):</strong> Menghitung manual / mengetik angka langsung tanpa rumus.
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>Akurasi Data (Hasil Akhir)</strong></td>
-                    <td class="rubric-score">20%</td>
-                    <td>
-                        <strong>4 (Sangat Baik):</strong> Laba Bersih tepat Rp 1.020.000.<br>
-                        <strong>2 (Cukup):</strong> Selisih angka karena salah input.
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>Analisis Bisnis</strong></td>
-                    <td class="rubric-score">30%</td>
-                    <td>
-                        <strong>4 (Sangat Baik):</strong> Menemukan angka saldo kritis tgl 15 & memberi solusi hemat yang logis.<br>
-                        <strong>1 (Kurang):</strong> Jawaban asal atau tidak diisi.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <section>
+            <h2>II. Kunci Jawaban (Studi Kasus ABC NetSolution)</h2>
+            <div class="answer-key">
+                <h3>Hasil Perhitungan Dashboard (Data Valid):</h3>
+                <ul>
+                    <li><strong>Total Pemasukan (Debit):</strong> Rp 3.900.000</li>
+                    <li><strong>Total Pengeluaran (Kredit):</strong> Rp 1.380.000</li>
+                    <li><strong>Saldo Akhir Kas:</strong> Rp 2.520.000</li>
+                    <li><strong>Laba Bersih (Profit):</strong> Rp 1.020.000<br>
+                    <em>(Rumus: Saldo Akhir - Modal Awal = 2.520.000 - 1.500.000)</em></li>
+                </ul>
+            </div>
 
-    <section>
-        <h2>IV. Tindak Lanjut</h2>
-        <ul>
-            <li><strong>Remedial:</strong> Siswa yang salah hitung wajib memperbaiki rumus Excel didampingi tutor sebaya.</li>
-            <li><strong>Pengayaan:</strong> Minta siswa membuat Grafik (Chart) Pemasukan vs Pengeluaran di Excel.</li>
-        </ul>
-    </section>
-</div>
+            <h3>Jawaban Analisis Kritis (Soal No. 4 & 5):</h3>
+            <p><strong>Soal 4: Posisi Saldo Tanggal 15 Feb</strong></p>
+            <p>Jawaban Benar: <strong>Rp 590.000</strong>.</p>
+            <p><em>Penjelasan:</em> Ini adalah titik kritis. Setelah membeli kabel box seharga 850rb, saldo menipis. Jika siswa menjawab "Aman tapi Kritis", beri nilai plus. Ini mengajarkan pentingnya menagih DP (Down Payment) sebelum kerja agar kas tidak kosong.</p>
+
+            <p><strong>Soal 5: Saran Penghematan</strong></p>
+            <p>Jawaban yang diharapkan:</p>
+            <ul>
+                <li>Membeli kabel LAN 1 box sekaligus (Grosir) dibanding eceran.</li>
+                <li>Efisiensi biaya makan (membawa bekal).</li>
+                <li>Menggunakan paket internet bulanan kantor, bukan harian.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>III. Rubrik Penilaian (Assessment)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Aspek Penilaian</th>
+                        <th style="width: 10%;" class="rubric-score">Bobot</th>
+                        <th>Kriteria Penilaian</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Teknis Excel (Input & Format)</strong></td>
+                        <td class="rubric-score">30%</td>
+                        <td>
+                            <strong>4 (Sangat Baik):</strong> Semua 12 data terinput benar, format Rp rapi.<br>
+                            <strong>2 (Cukup):</strong> Ada 2-3 kesalahan input, format acak-acakan.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Otomatisasi (Rumus)</strong></td>
+                        <td class="rubric-score">20%</td>
+                        <td>
+                            <strong>4 (Sangat Baik):</strong> Rumus Saldo & SUM berfungsi tanpa error.<br>
+                            <strong>1 (Kurang):</strong> Menghitung manual / mengetik angka langsung tanpa rumus.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Akurasi Data (Hasil Akhir)</strong></td>
+                        <td class="rubric-score">20%</td>
+                        <td>
+                            <strong>4 (Sangat Baik):</strong> Laba Bersih tepat Rp 1.020.000.<br>
+                            <strong>2 (Cukup):</strong> Selisih angka karena salah input.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analisis Bisnis</strong></td>
+                        <td class="rubric-score">30%</td>
+                        <td>
+                            <strong>4 (Sangat Baik):</strong> Menemukan angka saldo kritis tgl 15 & memberi solusi hemat yang logis.<br>
+                            <strong>1 (Kurang):</strong> Jawaban asal atau tidak diisi.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>IV. Tindak Lanjut</h2>
+            <ul>
+                <li><strong>Remedial:</strong> Siswa yang salah hitung wajib memperbaiki rumus Excel didampingi tutor sebaya.</li>
+                <li><strong>Pengayaan:</strong> Minta siswa membuat Grafik (Chart) Pemasukan vs Pengeluaran di Excel.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // 1. FUNGSI LOGIN
+        var input = document.getElementById("passInput");
+        
+        // Izinkan tekan Enter untuk login
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                cekPassword();
+            }
+        });
+
+        function cekPassword() {
+            var pass = document.getElementById("passInput").value;
+            if (pass === "4m1n4lone") {
+                document.getElementById("login-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            } else {
+                document.getElementById("error-msg").style.display = "block";
+                document.getElementById("passInput").value = "";
+            }
+        }
+
+        // 2. MEMATIKAN KLIK KANAN
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // 3. MEMATIKAN TOMBOL F12 DAN SHORTCUT LAINNYA
+        document.onkeydown = function(e) {
+            // Cek apakah input sedang fokus di kolom password
+            // Jika ya, izinkan pengetikan biasa
+            if(document.activeElement.id === "passInput") {
+                return true; 
+            }
+
+            // Blokir F12 (KeyCode 123)
+            if(e.keyCode == 123) {
+                return false;
+            }
+            // Blokir Ctrl+U (View Source)
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+            // Blokir Ctrl+Shift+I (Inspect Element)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            // Blokir Ctrl+Shift+J (Console)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            // Blokir Ctrl+S (Save)
+            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+                return false;
+            }
+             // Blokir Ctrl+P (Print - Opsional, bisa dihapus jika ingin print)
+             if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
 
 </body>
 </html>
